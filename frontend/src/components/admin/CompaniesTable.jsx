@@ -21,7 +21,7 @@ const CompaniesTable = () => {
     useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const res = await axios.get(`${COMPANY_API_END_POINT}/get`, { withCredentials: true });
+                const res = await axios.get(`https://jobhunt-vpo9.onrender.com/api/v1/company/get`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setCompanies(res.data.companies)); // ✅ Update Redux store
                 }
